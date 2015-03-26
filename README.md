@@ -1,6 +1,10 @@
 FFmpeg static build
 ===================
 
+Build + Release
+---------------
+
+
 Three scripts to make a static build of ffmpeg with all the latest codecs (webm + h264).
 
 Just follow the instructions below. Once you have the build dependencies,
