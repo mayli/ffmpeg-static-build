@@ -11,4 +11,4 @@ deploy:
   file: ffmpeg.tar.gz
   on:
     repo: mayli/ffmpeg-static-build
-    branch: master
+    tags: true
