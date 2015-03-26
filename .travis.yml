@@ -2,7 +2,7 @@ language: c
 compiler:
   - gcc
 # Change this to your needs
-script: ./build-ubuntu.sh -j$(nproc) && tar czvf ffmpeg.tar.gz target/
+script: ./build.sh -j$(nproc) && tar czvf ffmpeg.tar.gz target/
 
 deploy:
   provider: releases
