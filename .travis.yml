@@ -1,0 +1,13 @@
+language: c
+compiler:
+  - gcc
+# Change this to your needs
+script: ./build-ubuntu.sh && tar czvf ffmpeg.tar.gz target/
+
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: ffmpeg.tar.gz
+  skip_cleanup: true
+  on:
+    tags: true
