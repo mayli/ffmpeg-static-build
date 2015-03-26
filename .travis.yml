@@ -6,8 +6,9 @@ script: ./build-ubuntu.sh -j$(nproc) && tar czvf ffmpeg.tar.gz target/
 
 deploy:
   provider: releases
-  api_key: "GITHUB OAUTH TOKEN"
+  api_key:
+    secure: I0EWMVDiP1YZ8a7EK9yGxgcWLejaqr+YAHXgROmiof5SSyD3AmyYjzk13uA2mlMay0BI/zxAZRqGP/c48C8j+/7Zcdc8whwMQ8tnz5vffqtYQGFouiwZtIZtEbYpZOANHkgkh8w5qYqhhxHgMFM4EU4nkjh+PkICIYT2xM8E5mk=
   file: ffmpeg.tar.gz
-  skip_cleanup: true
   on:
-    tags: true
+    repo: mayli/ffmpeg-static-build
+    branch: master
